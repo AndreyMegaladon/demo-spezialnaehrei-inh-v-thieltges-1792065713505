@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Spezialnäherei Inh. V. Thieltges</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-50 text-neutral-800 font-sans">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold tracking-tight text-neutral-900">Spezialnäherei <span class="text-amber-600">Thieltges</span></a>
+            <nav class="hidden md:flex items-center space-x-1">
+                <a href="index.html" class="hover:bg-amber-50 text-neutral-700 rounded-lg px-4 py-2 font-medium transition">Startseite</a>
+                <a href="about.html" class="hover:bg-amber-50 text-neutral-700 rounded-lg px-4 py-2 font-medium transition">Über uns</a>
+                <a href="services.html" class="hover:bg-amber-50 text-neutral-700 rounded-lg px-4 py-2 font-medium transition">Menü</a>
+                <a href="gallery.html" class="bg-amber-500 text-white rounded-lg px-4 py-2 font-medium">Galerie</a>
+                <a href="booking.html" class="hover:bg-amber-50 text-neutral-700 rounded-lg px-4 py-2 font-medium transition">Termin buchen</a>
+                <a href="contacts.html" class="hover:bg-amber-50 text-neutral-700 rounded-lg px-4 py-2 font-medium transition">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+    <main class="py-12 px-6 max-w-6xl mx-auto">
+        <div class="text-sm text-stone-500 mb-6">
+            <a href="index.html" class="hover:underline">Startseite</a> > <span>Galerie</span>
+        </div>
+        <h1 class="text-4xl font-bold mb-4">Unsere Galerie</h1>
+        <p class="text-neutral-600 mb-12">Ein kleiner Einblick in unsere handwerkliche Arbeit und Werkstatt in Berlin.</p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="aspect-square overflow-hidden rounded-xl shadow-lg">
+                <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=800&auto=format&fit=crop" alt="Schneiderwerkstatt Arbeit" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-lg">
+                <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?q=80&w=800&auto=format&fit=crop" alt="Kleidungsanpassung" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-lg">
+                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop" alt="Vorhänge und Heimtextilien" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-lg">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop" alt="Maßanfertigung Detail" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-lg">
+                <img src="https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?q=80&w=800&auto=format&fit=crop" alt="Stoffe und Materialien" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-lg">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop" alt="Nähkunst" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+        </div>
+    </main>
+    <footer class="bg-neutral-900 text-stone-300 py-12 mt-20">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Spezialnäherei Thieltges</h3>
+                <p class="text-sm text-stone-400">Ihre Adresse für handwerkliche Präzision und erstklassige Schneidereidienstleistungen in Berlin.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Kontakt</h4>
+                <p class="text-sm text-stone-400 mb-2">Holsteinische Str. 41, 10717 Berlin</p>
+                <p class="text-sm text-stone-400 mb-2">Telefon: +49308738257</p>
+                <p class="text-sm text-stone-400">E-Mail: info@spezialnaeherei-berlin.de</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Öffnungszeiten</h4>
+                <p class="text-sm text-stone-400">Di 08:30–16:00, Mi 08:30–18:00, Fr 08:30–18:00, Sa 09:00–13:00</p>
+                <p class="text-sm text-stone-400 mt-2">(Mo, Do, So geschlossen)</p>
+            </div>
+        </div>
+    </footer>
+<script>
+    document.getElementById('mobile-toggle')?.addEventListener('click', function() {
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    });
+    // Плавная прокрутка
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+  </script>
+</body>
+</html>
